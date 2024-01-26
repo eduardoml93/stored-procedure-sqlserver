@@ -3,30 +3,10 @@ Stored Procedures são executadas no servidor de banco de dados e podem retornar
 
 Principais características das Stored Procedures:
 
-- Encapsulamento de Lógica: Permitem agrupar várias instruções SQL em um único bloco, facilitando a manutenção e o reuso de código.
-
-- Melhoria de Performance: Como são pré-compiladas, podem oferecer melhor desempenho em comparação com múltiplas chamadas de consultas SQL individuais.
-
-- Redução de Tráfego na Rede: Executadas no servidor, reduzem a quantidade de dados enviados pela rede.
-
-- Segurança: Podem ser usadas para garantir que os usuários acessem os dados de maneira controlada, sem expor detalhes da estrutura do banco de dados.
-
-- Suporte a Transações: Permitem o uso de transações, garantindo que uma série de operações seja completada com sucesso ou que todas falhem em conjunto.
-
-- Parâmetros de Entrada e Saída: Aceitam parâmetros, o que as torna flexíveis e reutilizáveis. Os parâmetros podem ser de entrada (input), de saída (output) ou ambos.
-
-- Manutenção: Facilitam a manutenção do código, pois mudanças podem ser feitas em um único local.
-
-- Programabilidade: Permitem a utilização de lógica de programação, como loops e condicionais, dentro do banco de dados.
-
-- Independência de Plataforma: São executadas no servidor de banco de dados, o que as torna independentes da plataforma do cliente.
-
-- Retorno de Conjuntos de Dados: Podem retornar resultados na forma de conjuntos de dados, que podem ser tratados por aplicações cliente.
-
-Usos comuns:
-
-Realizar operações CRUD (Create, Read, Update, Delete) de forma eficiente.
-Realizar operações complexas que envolvem múltiplas tabelas.
-Implementar regras de negócio complexas.
-Automatizar tarefas comuns de manutenção do banco de dados.
-Fazer validações e cálculos complexos.
+- Encapsulamento de tarefas repetitivas: Stored Procedures permitem que você encapsule uma sequência de comandos SQL que podem ser executados de uma só vez, como em uma função. Isso é útil para tarefas que são repetidas regularmente, pois você não precisa reescrever o mesmo código cada vez 2.
+- Acceptância de parâmetros de entrada: Stored Procedures podem aceitar parâmetros de entrada, permitindo que você personalize a operação que elas executam. Por exemplo, você pode passar diferentes valores para um parâmetro para executar a mesma Stored Procedure com diferentes resultados 2.
+- Utilização de comandos condicionais: Stored Procedures podem usar comandos condicionais como IF, ELSE, WHILE, LOOP, REPEAT e CASE. Isso permite que você crie lógica complexa dentro de suas Stored Procedures 2.
+- Chamada de outras Stored Procedures: Stored Procedures podem chamar outras Stored Procedures, permitindo que você crie uma sequência de operações que são executadas uma após a outra 2.
+- Retorno de um valor de status: Stored Procedures podem retornar um valor de status para indicar se a operação foi bem-sucedida ou não. Isso é útil para depuração e monitoramento 2.
+- Performance: Como as Stored Procedures são executadas no servidor, elas reduzem a quantidade de tráfego de rede, o que pode melhorar a performance. Além disso, os Stored Procedures são compilados, o que significa que eles são executados mais rapidamente do que se fossem executados diretamente como comandos SQL 4.
+- Segurança: Stored Procedures podem ser usadas para controlar o acesso aos dados. Em vez de dar a um usuário direitos SELECT, INSERT, UPDATE ou DELETE em um objeto, você pode dar a ele direitos EXECUTE em uma Stored Procedure. Isso cria um nível de abstração para permissões e ajuda a proteger seus dados 4.
